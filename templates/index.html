@@ -1,0 +1,51 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Diabetes Data</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h1>PREDICTING THE DIABETES PATIENT</h1>
+        <h2>Diabetes Data</h2>
+        <form action="calculate">
+            <div class="user-box">
+                <input type="text" name="exp1" required="" value="{{exp1}}">
+                <label>Pregnancies</label>
+            </div>
+            <div class="user-box">
+                 <input type="text" name="exp2" required="" value="{{exp2}}">
+                <label>Glucose</label>
+            </div> 
+            <div class="user-box">
+                <input type="text" name="exp3" required="" value="{{exp3}}">
+                <label>BloodPressure</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp4" required="" value="{{exp4}}">
+                <label>SkinThickness</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp5" required="" value="{{exp5}}">
+                <label>Insulin</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp6" required="" value="{{exp6}}">
+                <label>BMI</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp7" required="" value="{{exp7}}">
+                <label>DiabetesPedigreeFunction</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp8" required="" value="{{exp8}}">
+                <label>Age</label>
+            </div>
+             <input type="submit" name="submit" value="predict" class="submitbtn" />
+        </form><br>
+        <h2>Outcome : {{predicted}}</h2>
+    </div>
+</body>
+</html>
